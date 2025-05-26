@@ -1,0 +1,2069 @@
+<html class="h-full bg-gray-100" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Family Freshwater Refill Depot
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="h-full flex flex-col">
+  <div class="flex flex-1 h-full overflow-hidden" id="app">
+   <!-- Left Sidebar -->
+   <aside aria-label="Sidebar" class="w-64 bg-white border-r border-gray-300 flex flex-col overflow-y-auto">
+    <div class="flex items-center justify-center h-16 border-b border-gray-300 px-4">
+     <img alt="Logo Family Freshwater Refill Depot, blue water drop with family icon" class="w-8 h-8 mr-2" height="32" src="https://storage.googleapis.com/a1aa/image/1ef264ad-9618-4f8c-05b1-9c90326ba825.jpg" width="32"/>
+     <h1 class="text-xl font-semibold text-blue-700">
+      Family Freshwater
+     </h1>
+    </div>
+    <nav class="flex-1 px-2 py-4 space-y-1 text-gray-700 text-sm" id="menu">
+     <button aria-controls="login-panel" aria-expanded="false" class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="menu-login">
+      <i class="fas fa-sign-in-alt mr-3 w-5 text-blue-600">
+      </i>
+      Login
+     </button>
+     <div>
+      <button aria-controls="master-submenu" aria-expanded="false" class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="menu-master">
+       <span class="flex items-center">
+        <i class="fas fa-database mr-3 w-5 text-blue-600">
+        </i>
+        Menu Master
+       </span>
+       <i class="fas fa-chevron-right transition-transform duration-200" id="icon-master">
+       </i>
+      </button>
+      <div aria-label="Menu Master Submenu" class="ml-8 mt-1 space-y-1 hidden" id="master-submenu" role="region">
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="master-user-btn">
+        Master User
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="master-harga-btn">
+        Master Harga Barang &amp; Jumlah
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="master-supplier-btn">
+        Master Supplier
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="master-customer-btn">
+        Master Customer
+       </button>
+      </div>
+     </div>
+     <div>
+      <button aria-controls="transaksi-submenu" aria-expanded="false" class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="menu-transaksi">
+       <span class="flex items-center">
+        <i class="fas fa-exchange-alt mr-3 w-5 text-blue-600">
+        </i>
+        Transaksi
+       </span>
+       <i class="fas fa-chevron-right transition-transform duration-200" id="icon-transaksi">
+       </i>
+      </button>
+      <div aria-label="Transaksi Submenu" class="ml-8 mt-1 space-y-1 hidden" id="transaksi-submenu" role="region">
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="transaksi-penjualan-btn">
+        Data Entri Transaksi Penjualan
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="transaksi-pembelian-btn">
+        Data Entri Pembelian Barang dari Supplier
+       </button>
+      </div>
+     </div>
+     <div>
+      <button aria-controls="laporan-submenu" aria-expanded="false" class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="menu-laporan">
+       <span class="flex items-center">
+        <i class="fas fa-file-alt mr-3 w-5 text-blue-600">
+        </i>
+        Laporan
+       </span>
+       <i class="fas fa-chevron-right transition-transform duration-200" id="icon-laporan">
+       </i>
+      </button>
+      <div aria-label="Laporan Submenu" class="ml-8 mt-1 space-y-1 hidden" id="laporan-submenu" role="region">
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="laporan-penjualan-periode-btn">
+        Laporan Transaksi Penjualan Per Periode
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="laporan-pembelian-bulanan-btn">
+        Laporan Transaksi Bulanan Pembelian dari Supplier
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="laporan-penjualan-bulanan-btn">
+        Laporan Bulanan Transaksi Penjualan
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="laporan-laba-rugi-btn">
+        Laporan Laba Rugi Per Periode
+       </button>
+       <button class="w-full flex items-center px-3 py-2 rounded-md hover:bg-blue-100 focus:outline-none focus:bg-blue-200" id="laporan-stok-periode-btn">
+        Laporan Stok Per Periode
+       </button>
+      </div>
+     </div>
+     <button class="mt-auto mb-4 mx-4 px-3 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 flex items-center justify-center" id="btn-logout">
+      <i class="fas fa-sign-out-alt mr-2">
+      </i>
+      Logout
+     </button>
+    </nav>
+   </aside>
+   <!-- Main Content -->
+   <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
+    <!-- Login Panel -->
+    <section class="max-w-md mx-auto" id="login-panel" tabindex="0">
+     <h2 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
+      Login Family Freshwater Refill Depot
+     </h2>
+     <form class="bg-white p-6 rounded-lg shadow-md space-y-5" id="login-form">
+      <div>
+       <label class="block text-gray-700 font-medium mb-1" for="username">
+        Username
+       </label>
+       <input autocomplete="username" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="username" name="username" placeholder="Admin" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-medium mb-1" for="password">
+        Password
+       </label>
+       <input autocomplete="current-password" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="password" name="password" placeholder="putra" required="" type="password"/>
+      </div>
+      <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+       Login
+      </button>
+     </form>
+    </section>
+    <!-- Content Panels -->
+    <section class="hidden max-w-full" id="content-area">
+     <!-- Master User -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="master-user">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Master User
+      </h2>
+      <div class="overflow-x-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           ID
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Username
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Password
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Role
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-center w-32">
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="master-user-tbody">
+        </tbody>
+       </table>
+      </div>
+      <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" id="add-user-btn">
+       <i class="fas fa-plus mr-2">
+       </i>
+       Tambah User
+      </button>
+     </section>
+     <!-- Master Harga Barang & Jumlah -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="master-harga">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Master Harga Barang &amp; Jumlah
+      </h2>
+      <div class="overflow-x-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           ID
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Nama Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Harga (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Jumlah (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-center w-32">
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="master-harga-tbody">
+        </tbody>
+       </table>
+      </div>
+      <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" id="add-harga-btn">
+       <i class="fas fa-plus mr-2">
+       </i>
+       Tambah Harga Barang
+      </button>
+     </section>
+     <!-- Master Supplier -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="master-supplier">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Master Supplier
+      </h2>
+      <div class="overflow-x-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           ID
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Nama Supplier
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Alamat
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           No. Telepon
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-center w-32">
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="master-supplier-tbody">
+        </tbody>
+       </table>
+      </div>
+      <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" id="add-supplier-btn">
+       <i class="fas fa-plus mr-2">
+       </i>
+       Tambah Supplier
+      </button>
+     </section>
+     <!-- Master Customer -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="master-customer">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Master Customer
+      </h2>
+      <div class="overflow-x-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           ID
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Nama Customer
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Alamat
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           No. Telepon
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-center w-32">
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="master-customer-tbody">
+        </tbody>
+       </table>
+      </div>
+      <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" id="add-customer-btn">
+       <i class="fas fa-plus mr-2">
+       </i>
+       Tambah Customer
+      </button>
+     </section>
+     <!-- Transaksi Penjualan -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="transaksi-penjualan">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Data Entri Transaksi Penjualan
+      </h2>
+      <div class="overflow-x-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           ID
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Tanggal
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Customer
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Jumlah (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Harga (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Keterangan
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Total (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-center w-32">
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="transaksi-penjualan-tbody">
+        </tbody>
+       </table>
+      </div>
+      <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" id="add-penjualan-btn">
+       <i class="fas fa-plus mr-2">
+       </i>
+       Tambah Transaksi Penjualan
+      </button>
+     </section>
+     <!-- Transaksi Pembelian -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="transaksi-pembelian">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Data Entri Pembelian Barang dari Supplier
+      </h2>
+      <div class="overflow-x-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           ID
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Tanggal
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Supplier
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Jumlah (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Harga (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Total (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-center w-32">
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="transaksi-pembelian-tbody">
+        </tbody>
+       </table>
+      </div>
+      <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" id="add-pembelian-btn">
+       <i class="fas fa-plus mr-2">
+       </i>
+       Tambah Transaksi Pembelian
+      </button>
+     </section>
+     <!-- Laporan Transaksi Penjualan Per Periode -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="laporan-penjualan-periode">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Laporan Transaksi Penjualan Per Periode
+      </h2>
+      <form class="flex flex-wrap gap-4 mb-4 items-end" id="laporan-penjualan-periode-form">
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-penjualan-start">
+         Tanggal Mulai
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-penjualan-start" required="" type="date"/>
+       </div>
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-penjualan-end">
+         Tanggal Akhir
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-penjualan-end" required="" type="date"/>
+       </div>
+       <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+        Tampilkan
+       </button>
+      </form>
+      <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700 sticky top-0">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Tanggal
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Customer
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Jumlah (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Harga (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Keterangan
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Total (Rp)
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="laporan-penjualan-periode-tbody">
+        </tbody>
+        <tfoot>
+         <tr class="bg-blue-100 text-blue-700 font-semibold">
+          <td class="text-right px-3 py-2" colspan="6">
+           Grand Total (Rp)
+          </td>
+          <td class="px-3 py-2 text-left" id="laporan-penjualan-grandtotal">
+          </td>
+         </tr>
+        </tfoot>
+       </table>
+      </div>
+     </section>
+     <!-- Laporan Transaksi Bulanan Pembelian dari Supplier -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="laporan-pembelian-bulanan">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Laporan Transaksi Bulanan Pembelian dari Supplier
+      </h2>
+      <form class="flex flex-wrap gap-4 mb-4 items-end" id="laporan-pembelian-bulanan-form">
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-pembelian-bulan">
+         Bulan &amp; Tahun
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-pembelian-bulan" required="" type="month"/>
+       </div>
+       <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+        Tampilkan
+       </button>
+      </form>
+      <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700 sticky top-0">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Tanggal
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Supplier
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Jumlah (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Harga (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Total (Rp)
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="laporan-pembelian-bulanan-tbody">
+        </tbody>
+        <tfoot>
+         <tr class="bg-blue-100 text-blue-700 font-semibold">
+          <td class="text-right px-3 py-2" colspan="5">
+           Grand Total (Rp)
+          </td>
+          <td class="px-3 py-2 text-left" id="laporan-pembelian-bulanan-grandtotal">
+          </td>
+         </tr>
+        </tfoot>
+       </table>
+      </div>
+     </section>
+     <!-- Laporan Bulanan Transaksi Penjualan -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="laporan-penjualan-bulanan">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Laporan Bulanan Transaksi Penjualan
+      </h2>
+      <form class="flex flex-wrap gap-4 mb-4 items-end" id="laporan-penjualan-bulanan-form">
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-penjualan-bulan">
+         Bulan &amp; Tahun
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-penjualan-bulan" required="" type="month"/>
+       </div>
+       <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+        Tampilkan
+       </button>
+      </form>
+      <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700 sticky top-0">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Tanggal
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Customer
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Jumlah (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Harga (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Keterangan
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Total (Rp)
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="laporan-penjualan-bulanan-tbody">
+        </tbody>
+        <tfoot>
+         <tr class="bg-blue-100 text-blue-700 font-semibold">
+          <td class="text-right px-3 py-2" colspan="6">
+           Grand Total (Rp)
+          </td>
+          <td class="px-3 py-2 text-left" id="laporan-penjualan-bulanan-grandtotal">
+          </td>
+         </tr>
+        </tfoot>
+       </table>
+      </div>
+     </section>
+     <!-- Laporan Laba Rugi Per Periode -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="laporan-laba-rugi">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Laporan Laba Rugi Per Periode
+      </h2>
+      <form class="flex flex-wrap gap-4 mb-4 items-end" id="laporan-laba-rugi-form">
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-laba-rugi-start">
+         Tanggal Mulai
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-laba-rugi-start" required="" type="date"/>
+       </div>
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-laba-rugi-end">
+         Tanggal Akhir
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-laba-rugi-end" required="" type="date"/>
+       </div>
+       <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+        Tampilkan
+       </button>
+      </form>
+      <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700 sticky top-0">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Tanggal
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Pendapatan (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Pengeluaran (Rp)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Laba / Rugi (Rp)
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="laporan-laba-rugi-tbody">
+        </tbody>
+        <tfoot>
+         <tr class="bg-blue-100 text-blue-700 font-semibold">
+          <td class="text-right px-3 py-2">
+           Total
+          </td>
+          <td class="px-3 py-2" id="laporan-laba-rugi-pendapatan">
+          </td>
+          <td class="px-3 py-2" id="laporan-laba-rugi-pengeluaran">
+          </td>
+          <td class="px-3 py-2" id="laporan-laba-rugi-laba">
+          </td>
+         </tr>
+        </tfoot>
+       </table>
+      </div>
+     </section>
+     <!-- Laporan Stok Per Periode -->
+     <section class="hidden max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md" id="laporan-stok-periode">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4">
+       Laporan Stok Per Periode
+      </h2>
+      <form class="flex flex-wrap gap-4 mb-4 items-end" id="laporan-stok-periode-form">
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-stok-start">
+         Tanggal Mulai
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-stok-start" required="" type="date"/>
+       </div>
+       <div>
+        <label class="block text-gray-700 font-medium mb-1" for="laporan-stok-end">
+         Tanggal Akhir
+        </label>
+        <input class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" id="laporan-stok-end" required="" type="date"/>
+       </div>
+       <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+        Tampilkan
+       </button>
+      </form>
+      <div class="overflow-x-auto max-h-[400px] overflow-y-auto">
+       <table class="min-w-full border border-gray-300 rounded-md">
+        <thead class="bg-blue-100 text-blue-700 sticky top-0">
+         <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Barang
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Stok Awal (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Pembelian (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Penjualan (Liter)
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+           Stok Akhir (Liter)
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200" id="laporan-stok-periode-tbody">
+        </tbody>
+       </table>
+      </div>
+     </section>
+    </section>
+   </main>
+  </div>
+  <!-- Modal Template -->
+  <div aria-modal="true" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="modal" role="dialog">
+   <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative" role="document">
+    <button aria-label="Close modal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 focus:outline-none" id="modal-close">
+     <i class="fas fa-times text-xl">
+     </i>
+    </button>
+    <div id="modal-content">
+    </div>
+   </div>
+  </div>
+  <script>
+   // IndexedDB Setup
+    const dbName = "FamilyFreshwaterDB";
+    const dbVersion = 1;
+    let db;
+
+    function openDB() {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(dbName, dbVersion);
+        request.onerror = () => reject(request.error);
+        request.onsuccess = () => {
+          db = request.result;
+          resolve(db);
+        };
+        request.onupgradeneeded = (e) => {
+          db = e.target.result;
+          if (!db.objectStoreNames.contains("users")) {
+            const store = db.createObjectStore("users", { keyPath: "id", autoIncrement: true });
+            store.createIndex("username", "username", { unique: true });
+          }
+          if (!db.objectStoreNames.contains("hargaBarang")) {
+            const store = db.createObjectStore("hargaBarang", { keyPath: "id", autoIncrement: true });
+            store.createIndex("namaBarang", "namaBarang", { unique: false });
+          }
+          if (!db.objectStoreNames.contains("suppliers")) {
+            const store = db.createObjectStore("suppliers", { keyPath: "id", autoIncrement: true });
+            store.createIndex("namaSupplier", "namaSupplier", { unique: false });
+          }
+          if (!db.objectStoreNames.contains("customers")) {
+            const store = db.createObjectStore("customers", { keyPath: "id", autoIncrement: true });
+            store.createIndex("namaCustomer", "namaCustomer", { unique: false });
+          }
+          if (!db.objectStoreNames.contains("penjualan")) {
+            const store = db.createObjectStore("penjualan", { keyPath: "id", autoIncrement: true });
+            store.createIndex("tanggal", "tanggal", { unique: false });
+          }
+          if (!db.objectStoreNames.contains("pembelian")) {
+            const store = db.createObjectStore("pembelian", { keyPath: "id", autoIncrement: true });
+            store.createIndex("tanggal", "tanggal", { unique: false });
+          }
+        };
+      });
+    }
+
+    // Utility Functions
+    function promisifyRequest(request) {
+      return new Promise((resolve, reject) => {
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    // CRUD Functions for each store
+    async function getAll(storeName) {
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(storeName, "readonly");
+        const store = tx.objectStore(storeName);
+        const request = store.getAll();
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    async function addItem(storeName, item) {
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(storeName, "readwrite");
+        const store = tx.objectStore(storeName);
+        const request = store.add(item);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    async function updateItem(storeName, item) {
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(storeName, "readwrite");
+        const store = tx.objectStore(storeName);
+        const request = store.put(item);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    async function deleteItem(storeName, id) {
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(storeName, "readwrite");
+        const store = tx.objectStore(storeName);
+        const request = store.delete(id);
+        request.onsuccess = () => resolve();
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    // DOM Elements
+    const menuLoginBtn = document.getElementById("menu-login");
+    const menuMasterBtn = document.getElementById("menu-master");
+    const menuTransaksiBtn = document.getElementById("menu-transaksi");
+    const menuLaporanBtn = document.getElementById("menu-laporan");
+    const masterSubmenu = document.getElementById("master-submenu");
+    const transaksiSubmenu = document.getElementById("transaksi-submenu");
+    const laporanSubmenu = document.getElementById("laporan-submenu");
+    const iconMaster = document.getElementById("icon-master");
+    const iconTransaksi = document.getElementById("icon-transaksi");
+    const iconLaporan = document.getElementById("icon-laporan");
+    const contentArea = document.getElementById("content-area");
+    const loginPanel = document.getElementById("login-panel");
+    const btnLogout = document.getElementById("btn-logout");
+
+    // Submenu buttons
+    const masterUserBtn = document.getElementById("master-user-btn");
+    const masterHargaBtn = document.getElementById("master-harga-btn");
+    const masterSupplierBtn = document.getElementById("master-supplier-btn");
+    const masterCustomerBtn = document.getElementById("master-customer-btn");
+    const transaksiPenjualanBtn = document.getElementById("transaksi-penjualan-btn");
+    const transaksiPembelianBtn = document.getElementById("transaksi-pembelian-btn");
+    const laporanPenjualanPeriodeBtn = document.getElementById("laporan-penjualan-periode-btn");
+    const laporanPembelianBulananBtn = document.getElementById("laporan-pembelian-bulanan-btn");
+    const laporanPenjualanBulananBtn = document.getElementById("laporan-penjualan-bulanan-btn");
+    const laporanLabaRugiBtn = document.getElementById("laporan-laba-rugi-btn");
+    const laporanStokPeriodeBtn = document.getElementById("laporan-stok-periode-btn");
+
+    // Sections
+    const sections = {
+      "master-user": document.getElementById("master-user"),
+      "master-harga": document.getElementById("master-harga"),
+      "master-supplier": document.getElementById("master-supplier"),
+      "master-customer": document.getElementById("master-customer"),
+      "transaksi-penjualan": document.getElementById("transaksi-penjualan"),
+      "transaksi-pembelian": document.getElementById("transaksi-pembelian"),
+      "laporan-penjualan-periode": document.getElementById("laporan-penjualan-periode"),
+      "laporan-pembelian-bulanan": document.getElementById("laporan-pembelian-bulanan"),
+      "laporan-penjualan-bulanan": document.getElementById("laporan-penjualan-bulanan"),
+      "laporan-laba-rugi": document.getElementById("laporan-laba-rugi"),
+      "laporan-stok-periode": document.getElementById("laporan-stok-periode"),
+    };
+
+    // Modal Elements
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modal-content");
+    const modalCloseBtn = document.getElementById("modal-close");
+
+    // Login State
+    let loggedInUser = null;
+
+    // Helper: Show modal with content
+    function showModal(html) {
+      modalContent.innerHTML = "";
+      modalContent.appendChild(html);
+      modal.classList.remove("hidden");
+      modalCloseBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modalContent.innerHTML = "";
+    }
+
+    modalCloseBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Toggle submenu
+    function toggleSubmenu(button, submenu, icon) {
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      if (expanded) {
+        submenu.classList.add("hidden");
+        icon.classList.remove("rotate-90");
+        button.setAttribute("aria-expanded", "false");
+      } else {
+        submenu.classList.remove("hidden");
+        icon.classList.add("rotate-90");
+        button.setAttribute("aria-expanded", "true");
+      }
+    }
+
+    menuMasterBtn.addEventListener("click", () =>
+      toggleSubmenu(menuMasterBtn, masterSubmenu, iconMaster)
+    );
+    menuTransaksiBtn.addEventListener("click", () =>
+      toggleSubmenu(menuTransaksiBtn, transaksiSubmenu, iconTransaksi)
+    );
+    menuLaporanBtn.addEventListener("click", () =>
+      toggleSubmenu(menuLaporanBtn, laporanSubmenu, iconLaporan)
+    );
+
+    // Show only one main content section
+    function showSection(sectionId) {
+      for (const key in sections) {
+        if (key === sectionId) {
+          sections[key].classList.remove("hidden");
+        } else {
+          sections[key].classList.add("hidden");
+        }
+      }
+    }
+
+    // Show login panel or content area
+    function showLogin(show) {
+      if (show) {
+        loginPanel.classList.remove("hidden");
+        contentArea.classList.add("hidden");
+        btnLogout.classList.add("hidden");
+      } else {
+        loginPanel.classList.add("hidden");
+        contentArea.classList.remove("hidden");
+        btnLogout.classList.remove("hidden");
+      }
+    }
+
+    // Login form submit
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const username = e.target.username.value.trim();
+      const password = e.target.password.value.trim();
+
+      if (username === "Admin" && password === "putra") {
+        loggedInUser = { username: "Admin", role: "admin" };
+        showLogin(false);
+        showSection("master-user");
+        await loadAllData();
+      } else {
+        alert("Username atau password salah!");
+      }
+    });
+
+    // Logout button
+    btnLogout.addEventListener("click", () => {
+      loggedInUser = null;
+      showLogin(true);
+      clearAllTables();
+      collapseAllSubmenus();
+    });
+
+    // Collapse all submenus
+    function collapseAllSubmenus() {
+      [menuMasterBtn, menuTransaksiBtn, menuLaporanBtn].forEach((btn) => {
+        btn.setAttribute("aria-expanded", "false");
+      });
+      [masterSubmenu, transaksiSubmenu, laporanSubmenu].forEach((submenu) => {
+        submenu.classList.add("hidden");
+      });
+      [iconMaster, iconTransaksi, iconLaporan].forEach((icon) => {
+        icon.classList.remove("rotate-90");
+      });
+    }
+
+    // Clear all table bodies
+    function clearAllTables() {
+      [
+        "master-user-tbody",
+        "master-harga-tbody",
+        "master-supplier-tbody",
+        "master-customer-tbody",
+        "transaksi-penjualan-tbody",
+        "transaksi-pembelian-tbody",
+        "laporan-penjualan-periode-tbody",
+        "laporan-pembelian-bulanan-tbody",
+        "laporan-penjualan-bulanan-tbody",
+        "laporan-laba-rugi-tbody",
+        "laporan-stok-periode-tbody",
+      ].forEach((id) => {
+        const tbody = document.getElementById(id);
+        if (tbody) tbody.innerHTML = "";
+      });
+      // Clear grand totals
+      document.getElementById("laporan-penjualan-grandtotal").textContent = "";
+      document.getElementById("laporan-pembelian-bulanan-grandtotal").textContent = "";
+      document.getElementById("laporan-penjualan-bulanan-grandtotal").textContent = "";
+      document.getElementById("laporan-laba-rugi-pendapatan").textContent = "";
+      document.getElementById("laporan-laba-rugi-pengeluaran").textContent = "";
+      document.getElementById("laporan-laba-rugi-laba").textContent = "";
+      document.getElementById("laporan-penjualan-bulanan-grandtotal").textContent = "";
+    }
+
+    // Load all data for tables
+    async function loadAllData() {
+      await loadMasterUser();
+      await loadMasterHarga();
+      await loadMasterSupplier();
+      await loadMasterCustomer();
+      await loadTransaksiPenjualan();
+      await loadTransaksiPembelian();
+    }
+
+    // Format currency
+    function formatRp(num) {
+      return new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0,
+      }).format(num);
+    }
+
+    // Format date yyyy-mm-dd to dd/mm/yyyy
+    function formatDate(dateStr) {
+      if (!dateStr) return "";
+      const d = new Date(dateStr);
+      if (isNaN(d)) return dateStr;
+      return d.toLocaleDateString("id-ID");
+    }
+
+    // ========== MASTER USER ==========
+    const masterUserTbody = document.getElementById("master-user-tbody");
+    async function loadMasterUser() {
+      const users = await getAll("users");
+      masterUserTbody.innerHTML = "";
+      users.forEach((user) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${user.id}</td>
+          <td class="border border-gray-300 px-3 py-1">${user.username}</td>
+          <td class="border border-gray-300 px-3 py-1">********</td>
+          <td class="border border-gray-300 px-3 py-1">${user.role}</td>
+          <td class="border border-gray-300 px-3 py-1 text-center">
+            <button data-id="${user.id}" class="edit-user-btn text-blue-600 hover:text-blue-800 mr-2" title="Edit User">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button data-id="${user.id}" class="delete-user-btn text-red-600 hover:text-red-800" title="Hapus User">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        `;
+        masterUserTbody.appendChild(tr);
+      });
+      // Attach event listeners
+      document.querySelectorAll(".edit-user-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          editUser(id);
+        })
+      );
+      document.querySelectorAll(".delete-user-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          if (confirm("Yakin ingin menghapus user ini?")) {
+            deleteItem("users", id).then(loadMasterUser);
+          }
+        })
+      );
+    }
+
+    // Add User Button
+    document.getElementById("add-user-btn").addEventListener("click", () => {
+      openUserForm();
+    });
+
+    // Open User Form Modal
+    async function openUserForm(user = null) {
+      const form = document.createElement("form");
+      form.className = "space-y-4";
+      form.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${user ? "Edit User" : "Tambah User"}</h3>
+        <div>
+          <label for="form-username" class="block text-gray-700 font-medium mb-1">Username</label>
+          <input type="text" id="form-username" name="username" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${user ? user.username : ""}" />
+        </div>
+        <div>
+          <label for="form-password" class="block text-gray-700 font-medium mb-1">${user ? "Password (kosongkan jika tidak diubah)" : "Password"}</label>
+          <input type="password" id="form-password" name="password" ${user ? "" : "required"} class="w-full border border-gray-300 rounded-md px-3 py-2" />
+        </div>
+        <div>
+          <label for="form-role" class="block text-gray-700 font-medium mb-1">Role</label>
+          <select id="form-role" name="role" required class="w-full border border-gray-300 rounded-md px-3 py-2">
+            <option value="">-- Pilih Role --</option>
+            <option value="admin" ${user && user.role === "admin" ? "selected" : ""}>Admin</option>
+            <option value="user" ${user && user.role === "user" ? "selected" : ""}>User</option>
+          </select>
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancel-btn" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Batal</button>
+          <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Simpan</button>
+        </div>
+      `;
+      showModal(form);
+
+      form.querySelector("#cancel-btn").addEventListener("click", closeModal);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const username = form.username.value.trim();
+        const password = form.password.value;
+        const role = form.role.value;
+
+        if (!username || !role) {
+          alert("Username dan Role harus diisi.");
+          return;
+        }
+
+        if (user) {
+          // Edit user
+          const updatedUser = { ...user };
+          updatedUser.username = username;
+          if (password) updatedUser.password = password;
+          updatedUser.role = role;
+          await updateItem("users", updatedUser);
+        } else {
+          // Add new user
+          // Check if username exists
+          const users = await getAll("users");
+          if (users.some((u) => u.username.toLowerCase() === username.toLowerCase())) {
+            alert("Username sudah digunakan.");
+            return;
+          }
+          await addItem("users", { username, password, role });
+        }
+        closeModal();
+        await loadMasterUser();
+      });
+    }
+
+    // Edit User
+    async function editUser(id) {
+      const users = await getAll("users");
+      const user = users.find((u) => u.id === id);
+      if (user) openUserForm(user);
+    }
+
+    // ========== MASTER HARGA BARANG ==========
+    const masterHargaTbody = document.getElementById("master-harga-tbody");
+    async function loadMasterHarga() {
+      const items = await getAll("hargaBarang");
+      masterHargaTbody.innerHTML = "";
+      items.forEach((item) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${item.id}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.namaBarang}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(item.harga)}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.jumlah}</td>
+          <td class="border border-gray-300 px-3 py-1 text-center">
+            <button data-id="${item.id}" class="edit-harga-btn text-blue-600 hover:text-blue-800 mr-2" title="Edit Harga Barang">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button data-id="${item.id}" class="delete-harga-btn text-red-600 hover:text-red-800" title="Hapus Harga Barang">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        `;
+        masterHargaTbody.appendChild(tr);
+      });
+      // Attach event listeners
+      document.querySelectorAll(".edit-harga-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          editHarga(id);
+        })
+      );
+      document.querySelectorAll(".delete-harga-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          if (confirm("Yakin ingin menghapus harga barang ini?")) {
+            deleteItem("hargaBarang", id).then(loadMasterHarga);
+          }
+        })
+      );
+    }
+
+    // Add Harga Button
+    document.getElementById("add-harga-btn").addEventListener("click", () => {
+      openHargaForm();
+    });
+
+    // Open Harga Form Modal
+    async function openHargaForm(item = null) {
+      const form = document.createElement("form");
+      form.className = "space-y-4";
+      form.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${item ? "Edit Harga Barang" : "Tambah Harga Barang"}</h3>
+        <div>
+          <label for="form-namaBarang" class="block text-gray-700 font-medium mb-1">Nama Barang</label>
+          <input type="text" id="form-namaBarang" name="namaBarang" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.namaBarang : ""}" />
+        </div>
+        <div>
+          <label for="form-harga" class="block text-gray-700 font-medium mb-1">Harga (Rp)</label>
+          <input type="number" id="form-harga" name="harga" min="0" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.harga : ""}" />
+        </div>
+        <div>
+          <label for="form-jumlah" class="block text-gray-700 font-medium mb-1">Jumlah (Liter)</label>
+          <input type="number" id="form-jumlah" name="jumlah" min="0" step="0.01" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.jumlah : ""}" />
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancel-btn" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Batal</button>
+          <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Simpan</button>
+        </div>
+      `;
+      showModal(form);
+
+      form.querySelector("#cancel-btn").addEventListener("click", closeModal);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const namaBarang = form.namaBarang.value.trim();
+        const harga = Number(form.harga.value);
+        const jumlah = Number(form.jumlah.value);
+
+        if (!namaBarang || harga < 0 || jumlah < 0) {
+          alert("Data tidak valid.");
+          return;
+        }
+
+        if (item) {
+          const updated = { ...item, namaBarang, harga, jumlah };
+          await updateItem("hargaBarang", updated);
+        } else {
+          await addItem("hargaBarang", { namaBarang, harga, jumlah });
+        }
+        closeModal();
+        await loadMasterHarga();
+      });
+    }
+
+    // Edit Harga
+    async function editHarga(id) {
+      const items = await getAll("hargaBarang");
+      const item = items.find((i) => i.id === id);
+      if (item) openHargaForm(item);
+    }
+
+    // ========== MASTER SUPPLIER ==========
+    const masterSupplierTbody = document.getElementById("master-supplier-tbody");
+    async function loadMasterSupplier() {
+      const suppliers = await getAll("suppliers");
+      masterSupplierTbody.innerHTML = "";
+      suppliers.forEach((supplier) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${supplier.id}</td>
+          <td class="border border-gray-300 px-3 py-1">${supplier.namaSupplier}</td>
+          <td class="border border-gray-300 px-3 py-1">${supplier.alamat}</td>
+          <td class="border border-gray-300 px-3 py-1">${supplier.telepon}</td>
+          <td class="border border-gray-300 px-3 py-1 text-center">
+            <button data-id="${supplier.id}" class="edit-supplier-btn text-blue-600 hover:text-blue-800 mr-2" title="Edit Supplier">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button data-id="${supplier.id}" class="delete-supplier-btn text-red-600 hover:text-red-800" title="Hapus Supplier">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        `;
+        masterSupplierTbody.appendChild(tr);
+      });
+      // Attach event listeners
+      document.querySelectorAll(".edit-supplier-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          editSupplier(id);
+        })
+      );
+      document.querySelectorAll(".delete-supplier-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          if (confirm("Yakin ingin menghapus supplier ini?")) {
+            deleteItem("suppliers", id).then(loadMasterSupplier);
+          }
+        })
+      );
+    }
+
+    // Add Supplier Button
+    document.getElementById("add-supplier-btn").addEventListener("click", () => {
+      openSupplierForm();
+    });
+
+    // Open Supplier Form Modal
+    async function openSupplierForm(supplier = null) {
+      const form = document.createElement("form");
+      form.className = "space-y-4";
+      form.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${supplier ? "Edit Supplier" : "Tambah Supplier"}</h3>
+        <div>
+          <label for="form-namaSupplier" class="block text-gray-700 font-medium mb-1">Nama Supplier</label>
+          <input type="text" id="form-namaSupplier" name="namaSupplier" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${supplier ? supplier.namaSupplier : ""}" />
+        </div>
+        <div>
+          <label for="form-alamatSupplier" class="block text-gray-700 font-medium mb-1">Alamat</label>
+          <input type="text" id="form-alamatSupplier" name="alamat" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${supplier ? supplier.alamat : ""}" />
+        </div>
+        <div>
+          <label for="form-teleponSupplier" class="block text-gray-700 font-medium mb-1">No. Telepon</label>
+          <input type="tel" id="form-teleponSupplier" name="telepon" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${supplier ? supplier.telepon : ""}" />
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancel-btn" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Batal</button>
+          <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Simpan</button>
+        </div>
+      `;
+      showModal(form);
+
+      form.querySelector("#cancel-btn").addEventListener("click", closeModal);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const namaSupplier = form.namaSupplier.value.trim();
+        const alamat = form.alamat.value.trim();
+        const telepon = form.telepon.value.trim();
+
+        if (!namaSupplier || !alamat || !telepon) {
+          alert("Semua field harus diisi.");
+          return;
+        }
+
+        if (supplier) {
+          const updated = { ...supplier, namaSupplier, alamat, telepon };
+          await updateItem("suppliers", updated);
+        } else {
+          await addItem("suppliers", { namaSupplier, alamat, telepon });
+        }
+        closeModal();
+        await loadMasterSupplier();
+      });
+    }
+
+    // Edit Supplier
+    async function editSupplier(id) {
+      const suppliers = await getAll("suppliers");
+      const supplier = suppliers.find((s) => s.id === id);
+      if (supplier) openSupplierForm(supplier);
+    }
+
+    // ========== MASTER CUSTOMER ==========
+    const masterCustomerTbody = document.getElementById("master-customer-tbody");
+    async function loadMasterCustomer() {
+      const customers = await getAll("customers");
+      masterCustomerTbody.innerHTML = "";
+      customers.forEach((customer) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${customer.id}</td>
+          <td class="border border-gray-300 px-3 py-1">${customer.namaCustomer}</td>
+          <td class="border border-gray-300 px-3 py-1">${customer.alamat}</td>
+          <td class="border border-gray-300 px-3 py-1">${customer.telepon}</td>
+          <td class="border border-gray-300 px-3 py-1 text-center">
+            <button data-id="${customer.id}" class="edit-customer-btn text-blue-600 hover:text-blue-800 mr-2" title="Edit Customer">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button data-id="${customer.id}" class="delete-customer-btn text-red-600 hover:text-red-800" title="Hapus Customer">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        `;
+        masterCustomerTbody.appendChild(tr);
+      });
+      // Attach event listeners
+      document.querySelectorAll(".edit-customer-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          editCustomer(id);
+        })
+      );
+      document.querySelectorAll(".delete-customer-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          if (confirm("Yakin ingin menghapus customer ini?")) {
+            deleteItem("customers", id).then(loadMasterCustomer);
+          }
+        })
+      );
+    }
+
+    // Add Customer Button
+    document.getElementById("add-customer-btn").addEventListener("click", () => {
+      openCustomerForm();
+    });
+
+    // Open Customer Form Modal
+    async function openCustomerForm(customer = null) {
+      const form = document.createElement("form");
+      form.className = "space-y-4";
+      form.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${customer ? "Edit Customer" : "Tambah Customer"}</h3>
+        <div>
+          <label for="form-namaCustomer" class="block text-gray-700 font-medium mb-1">Nama Customer</label>
+          <input type="text" id="form-namaCustomer" name="namaCustomer" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${customer ? customer.namaCustomer : ""}" />
+        </div>
+        <div>
+          <label for="form-alamatCustomer" class="block text-gray-700 font-medium mb-1">Alamat</label>
+          <input type="text" id="form-alamatCustomer" name="alamat" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${customer ? customer.alamat : ""}" />
+        </div>
+        <div>
+          <label for="form-teleponCustomer" class="block text-gray-700 font-medium mb-1">No. Telepon</label>
+          <input type="tel" id="form-teleponCustomer" name="telepon" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${customer ? customer.telepon : ""}" />
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancel-btn" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Batal</button>
+          <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Simpan</button>
+        </div>
+      `;
+      showModal(form);
+
+      form.querySelector("#cancel-btn").addEventListener("click", closeModal);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const namaCustomer = form.namaCustomer.value.trim();
+        const alamat = form.alamat.value.trim();
+        const telepon = form.telepon.value.trim();
+
+        if (!namaCustomer || !alamat || !telepon) {
+          alert("Semua field harus diisi.");
+          return;
+        }
+
+        if (customer) {
+          const updated = { ...customer, namaCustomer, alamat, telepon };
+          await updateItem("customers", updated);
+        } else {
+          await addItem("customers", { namaCustomer, alamat, telepon });
+        }
+        closeModal();
+        await loadMasterCustomer();
+      });
+    }
+
+    // Edit Customer
+    async function editCustomer(id) {
+      const customers = await getAll("customers");
+      const customer = customers.find((c) => c.id === id);
+      if (customer) openCustomerForm(customer);
+    }
+
+    // ========== TRANSAKSI PENJUALAN ==========
+    const transaksiPenjualanTbody = document.getElementById("transaksi-penjualan-tbody");
+    async function loadTransaksiPenjualan() {
+      const penjualan = await getAll("penjualan");
+      transaksiPenjualanTbody.innerHTML = "";
+      penjualan.forEach((item) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${item.id}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatDate(item.tanggal)}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.customer}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.barang}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.jumlah}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(item.harga)}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.keterangan || ""}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(item.total)}</td>
+          <td class="border border-gray-300 px-3 py-1 text-center">
+            <button data-id="${item.id}" class="edit-penjualan-btn text-blue-600 hover:text-blue-800 mr-2" title="Edit Transaksi Penjualan">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button data-id="${item.id}" class="delete-penjualan-btn text-red-600 hover:text-red-800" title="Hapus Transaksi Penjualan">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        `;
+        transaksiPenjualanTbody.appendChild(tr);
+      });
+      // Attach event listeners
+      document.querySelectorAll(".edit-penjualan-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          editPenjualan(id);
+        })
+      );
+      document.querySelectorAll(".delete-penjualan-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          if (confirm("Yakin ingin menghapus transaksi penjualan ini?")) {
+            deleteItem("penjualan", id).then(loadTransaksiPenjualan);
+          }
+        })
+      );
+    }
+
+    // Add Penjualan Button
+    document.getElementById("add-penjualan-btn").addEventListener("click", () => {
+      openPenjualanForm();
+    });
+
+    // Open Penjualan Form Modal
+    async function openPenjualanForm(item = null) {
+      // Load customers and hargaBarang for select options
+      const customers = await getAll("customers");
+      const hargaBarang = await getAll("hargaBarang");
+
+      const form = document.createElement("form");
+      form.className = "space-y-4 max-h-[80vh] overflow-y-auto";
+      form.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${item ? "Edit Transaksi Penjualan" : "Tambah Transaksi Penjualan"}</h3>
+        <div>
+          <label for="form-tanggal" class="block text-gray-700 font-medium mb-1">Tanggal</label>
+          <input type="date" id="form-tanggal" name="tanggal" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.tanggal : new Date().toISOString().slice(0,10)}" />
+        </div>
+        <div>
+          <label for="form-customer" class="block text-gray-700 font-medium mb-1">Customer</label>
+          <select id="form-customer" name="customer" required class="w-full border border-gray-300 rounded-md px-3 py-2">
+            <option value="">-- Pilih Customer --</option>
+            ${customers
+              .map(
+                (c) =>
+                  `<option value="${c.namaCustomer}" ${
+                    item && item.customer === c.namaCustomer ? "selected" : ""
+                  }>${c.namaCustomer}</option>`
+              )
+              .join("")}
+          </select>
+        </div>
+        <div>
+          <label for="form-barang" class="block text-gray-700 font-medium mb-1">Barang</label>
+          <select id="form-barang" name="barang" required class="w-full border border-gray-300 rounded-md px-3 py-2">
+            <option value="">-- Pilih Barang --</option>
+            ${hargaBarang
+              .map(
+                (h) =>
+                  `<option value="${h.namaBarang}" data-harga="${h.harga}" data-jumlah="${h.jumlah}" ${
+                    item && item.barang === h.namaBarang ? "selected" : ""
+                  }>${h.namaBarang}</option>`
+              )
+              .join("")}
+          </select>
+        </div>
+        <div>
+          <label for="form-jumlah" class="block text-gray-700 font-medium mb-1">Jumlah (Liter)</label>
+          <input type="number" id="form-jumlah" name="jumlah" min="0" step="0.01" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.jumlah : ""}" />
+        </div>
+        <div>
+          <label for="form-harga" class="block text-gray-700 font-medium mb-1">Harga (Rp)</label>
+          <input type="number" id="form-harga" name="harga" min="0" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.harga : ""}" readonly />
+        </div>
+        <div>
+          <label for="form-keterangan" class="block text-gray-700 font-medium mb-1">Keterangan</label>
+          <input type="text" id="form-keterangan" name="keterangan" class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.keterangan : ""}" />
+        </div>
+        <div>
+          <label for="form-total" class="block text-gray-700 font-medium mb-1">Total (Rp)</label>
+          <input type="number" id="form-total" name="total" min="0" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.total : ""}" readonly />
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancel-btn" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Batal</button>
+          <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Simpan</button>
+        </div>
+      `;
+      showModal(form);
+
+      const formBarang = form.querySelector("#form-barang");
+      const formHarga = form.querySelector("#form-harga");
+      const formJumlah = form.querySelector("#form-jumlah");
+      const formTotal = form.querySelector("#form-total");
+
+      // Update harga when barang changes
+      formBarang.addEventListener("change", () => {
+        const selectedOption = formBarang.selectedOptions[0];
+        if (selectedOption) {
+          const harga = Number(selectedOption.dataset.harga) || 0;
+          formHarga.value = harga;
+          updateTotal();
+        }
+      });
+
+      // Update total when jumlah or harga changes
+      function updateTotal() {
+        const harga = Number(formHarga.value) || 0;
+        const jumlah = Number(formJumlah.value) || 0;
+        formTotal.value = harga * jumlah;
+      }
+
+      formJumlah.addEventListener("input", updateTotal);
+      formHarga.addEventListener("input", updateTotal);
+
+      if (!item) {
+        formHarga.value = "";
+        formTotal.value = "";
+      }
+
+      form.querySelector("#cancel-btn").addEventListener("click", closeModal);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const tanggal = form.tanggal.value;
+        const customer = form.customer.value;
+        const barang = form.barang.value;
+        const jumlah = Number(form.jumlah.value);
+        const harga = Number(form.harga.value);
+        const keterangan = form.keterangan.value.trim();
+        const total = Number(form.total.value);
+
+        if (!tanggal || !customer || !barang || jumlah <= 0 || harga < 0 || total < 0) {
+          alert("Data tidak valid.");
+          return;
+        }
+
+        if (item) {
+          const updated = { ...item, tanggal, customer, barang, jumlah, harga, keterangan, total };
+          await updateItem("penjualan", updated);
+        } else {
+          await addItem("penjualan", { tanggal, customer, barang, jumlah, harga, keterangan, total });
+        }
+        closeModal();
+        await loadTransaksiPenjualan();
+      });
+    }
+
+    // Edit Penjualan
+    async function editPenjualan(id) {
+      const penjualan = await getAll("penjualan");
+      const item = penjualan.find((p) => p.id === id);
+      if (item) openPenjualanForm(item);
+    }
+
+    // ========== TRANSAKSI PEMBELIAN ==========
+    const transaksiPembelianTbody = document.getElementById("transaksi-pembelian-tbody");
+    async function loadTransaksiPembelian() {
+      const pembelian = await getAll("pembelian");
+      transaksiPembelianTbody.innerHTML = "";
+      pembelian.forEach((item) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${item.id}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatDate(item.tanggal)}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.supplier}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.barang}</td>
+          <td class="border border-gray-300 px-3 py-1">${item.jumlah}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(item.harga)}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(item.total)}</td>
+          <td class="border border-gray-300 px-3 py-1 text-center">
+            <button data-id="${item.id}" class="edit-pembelian-btn text-blue-600 hover:text-blue-800 mr-2" title="Edit Transaksi Pembelian">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button data-id="${item.id}" class="delete-pembelian-btn text-red-600 hover:text-red-800" title="Hapus Transaksi Pembelian">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        `;
+        transaksiPembelianTbody.appendChild(tr);
+      });
+      // Attach event listeners
+      document.querySelectorAll(".edit-pembelian-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          editPembelian(id);
+        })
+      );
+      document.querySelectorAll(".delete-pembelian-btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          const id = Number(e.currentTarget.dataset.id);
+          if (confirm("Yakin ingin menghapus transaksi pembelian ini?")) {
+            deleteItem("pembelian", id).then(loadTransaksiPembelian);
+          }
+        })
+      );
+    }
+
+    // Add Pembelian Button
+    document.getElementById("add-pembelian-btn").addEventListener("click", () => {
+      openPembelianForm();
+    });
+
+    // Open Pembelian Form Modal
+    async function openPembelianForm(item = null) {
+      // Load suppliers and hargaBarang for select options
+      const suppliers = await getAll("suppliers");
+      const hargaBarang = await getAll("hargaBarang");
+
+      const form = document.createElement("form");
+      form.className = "space-y-4 max-h-[80vh] overflow-y-auto";
+      form.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${item ? "Edit Transaksi Pembelian" : "Tambah Transaksi Pembelian"}</h3>
+        <div>
+          <label for="form-tanggal" class="block text-gray-700 font-medium mb-1">Tanggal</label>
+          <input type="date" id="form-tanggal" name="tanggal" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.tanggal : new Date().toISOString().slice(0,10)}" />
+        </div>
+        <div>
+          <label for="form-supplier" class="block text-gray-700 font-medium mb-1">Supplier</label>
+          <select id="form-supplier" name="supplier" required class="w-full border border-gray-300 rounded-md px-3 py-2">
+            <option value="">-- Pilih Supplier --</option>
+            ${suppliers
+              .map(
+                (s) =>
+                  `<option value="${s.namaSupplier}" ${
+                    item && item.supplier === s.namaSupplier ? "selected" : ""
+                  }>${s.namaSupplier}</option>`
+              )
+              .join("")}
+          </select>
+        </div>
+        <div>
+          <label for="form-barang" class="block text-gray-700 font-medium mb-1">Barang</label>
+          <select id="form-barang" name="barang" required class="w-full border border-gray-300 rounded-md px-3 py-2">
+            <option value="">-- Pilih Barang --</option>
+            ${hargaBarang
+              .map(
+                (h) =>
+                  `<option value="${h.namaBarang}" data-harga="${h.harga}" data-jumlah="${h.jumlah}" ${
+                    item && item.barang === h.namaBarang ? "selected" : ""
+                  }>${h.namaBarang}</option>`
+              )
+              .join("")}
+          </select>
+        </div>
+        <div>
+          <label for="form-jumlah" class="block text-gray-700 font-medium mb-1">Jumlah (Liter)</label>
+          <input type="number" id="form-jumlah" name="jumlah" min="0" step="0.01" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.jumlah : ""}" />
+        </div>
+        <div>
+          <label for="form-harga" class="block text-gray-700 font-medium mb-1">Harga (Rp)</label>
+          <input type="number" id="form-harga" name="harga" min="0" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.harga : ""}" readonly />
+        </div>
+        <div>
+          <label for="form-total" class="block text-gray-700 font-medium mb-1">Total (Rp)</label>
+          <input type="number" id="form-total" name="total" min="0" required class="w-full border border-gray-300 rounded-md px-3 py-2" value="${item ? item.total : ""}" readonly />
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" id="cancel-btn" class="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100">Batal</button>
+          <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Simpan</button>
+        </div>
+      `;
+      showModal(form);
+
+      const formBarang = form.querySelector("#form-barang");
+      const formHarga = form.querySelector("#form-harga");
+      const formJumlah = form.querySelector("#form-jumlah");
+      const formTotal = form.querySelector("#form-total");
+
+      // Update harga when barang changes
+      formBarang.addEventListener("change", () => {
+        const selectedOption = formBarang.selectedOptions[0];
+        if (selectedOption) {
+          const harga = Number(selectedOption.dataset.harga) || 0;
+          formHarga.value = harga;
+          updateTotal();
+        }
+      });
+
+      // Update total when jumlah or harga changes
+      function updateTotal() {
+        const harga = Number(formHarga.value) || 0;
+        const jumlah = Number(formJumlah.value) || 0;
+        formTotal.value = harga * jumlah;
+      }
+
+      formJumlah.addEventListener("input", updateTotal);
+      formHarga.addEventListener("input", updateTotal);
+
+      if (!item) {
+        formHarga.value = "";
+        formTotal.value = "";
+      }
+
+      form.querySelector("#cancel-btn").addEventListener("click", closeModal);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const tanggal = form.tanggal.value;
+        const supplier = form.supplier.value;
+        const barang = form.barang.value;
+        const jumlah = Number(form.jumlah.value);
+        const harga = Number(form.harga.value);
+        const total = Number(form.total.value);
+
+        if (!tanggal || !supplier || !barang || jumlah <= 0 || harga < 0 || total < 0) {
+          alert("Data tidak valid.");
+          return;
+        }
+
+        if (item) {
+          const updated = { ...item, tanggal, supplier, barang, jumlah, harga, total };
+          await updateItem("pembelian", updated);
+        } else {
+          await addItem("pembelian", { tanggal, supplier, barang, jumlah, harga, total });
+        }
+        closeModal();
+        await loadTransaksiPembelian();
+      });
+    }
+
+    // Edit Pembelian
+    async function editPembelian(id) {
+      const pembelian = await getAll("pembelian");
+      const item = pembelian.find((p) => p.id === id);
+      if (item) openPembelianForm(item);
+    }
+
+    // ========== LAPORAN TRANSAKSI PENJUALAN PER PERIODE ==========
+    const laporanPenjualanPeriodeForm = document.getElementById("laporan-penjualan-periode-form");
+    const laporanPenjualanPeriodeTbody = document.getElementById("laporan-penjualan-periode-tbody");
+    const laporanPenjualanGrandtotal = document.getElementById("laporan-penjualan-grandtotal");
+
+    laporanPenjualanPeriodeForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const start = laporanPenjualanPeriodeForm["laporan-penjualan-start"].value;
+      const end = laporanPenjualanPeriodeForm["laporan-penjualan-end"].value;
+      if (!start || !end || start > end) {
+        alert("Periode tanggal tidak valid.");
+        return;
+      }
+      const penjualan = await getAll("penjualan");
+      const filtered = penjualan.filter((p) => p.tanggal >= start && p.tanggal <= end);
+      laporanPenjualanPeriodeTbody.innerHTML = "";
+      let grandTotal = 0;
+      filtered.forEach((p) => {
+        grandTotal += p.total;
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${formatDate(p.tanggal)}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.customer}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.barang}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.jumlah}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(p.harga)}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.keterangan || ""}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(p.total)}</td>
+        `;
+        laporanPenjualanPeriodeTbody.appendChild(tr);
+      });
+      laporanPenjualanGrandtotal.textContent = formatRp(grandTotal);
+    });
+
+    // ========== LAPORAN TRANSAKSI BULANAN PEMBELIAN DARI SUPPLIER ==========
+    const laporanPembelianBulananForm = document.getElementById("laporan-pembelian-bulanan-form");
+    const laporanPembelianBulananTbody = document.getElementById("laporan-pembelian-bulanan-tbody");
+    const laporanPembelianBulananGrandtotal = document.getElementById("laporan-pembelian-bulanan-grandtotal");
+
+    laporanPembelianBulananForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const bulanTahun = laporanPembelianBulananForm["laporan-pembelian-bulan"].value;
+      if (!bulanTahun) {
+        alert("Bulan & Tahun harus diisi.");
+        return;
+      }
+      const [year, month] = bulanTahun.split("-");
+      const pembelian = await getAll("pembelian");
+      const filtered = pembelian.filter((p) => {
+        const d = new Date(p.tanggal);
+        return d.getFullYear() === Number(year) && d.getMonth() + 1 === Number(month);
+      });
+      laporanPembelianBulananTbody.innerHTML = "";
+      let grandTotal = 0;
+      filtered.forEach((p) => {
+        grandTotal += p.total;
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${formatDate(p.tanggal)}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.supplier}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.barang}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.jumlah}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(p.harga)}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(p.total)}</td>
+        `;
+        laporanPembelianBulananTbody.appendChild(tr);
+      });
+      laporanPembelianBulananGrandtotal.textContent = formatRp(grandTotal);
+    });
+
+    // ========== LAPORAN BULANAN TRANSAKSI PENJUALAN ==========
+    const laporanPenjualanBulananForm = document.getElementById("laporan-penjualan-bulanan-form");
+    const laporanPenjualanBulananTbody = document.getElementById("laporan-penjualan-bulanan-tbody");
+    const laporanPenjualanBulananGrandtotal = document.getElementById("laporan-penjualan-bulanan-grandtotal");
+
+    laporanPenjualanBulananForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const bulanTahun = laporanPenjualanBulananForm["laporan-penjualan-bulan"].value;
+      if (!bulanTahun) {
+        alert("Bulan & Tahun harus diisi.");
+        return;
+      }
+      const [year, month] = bulanTahun.split("-");
+      const penjualan = await getAll("penjualan");
+      const filtered = penjualan.filter((p) => {
+        const d = new Date(p.tanggal);
+        return d.getFullYear() === Number(year) && d.getMonth() + 1 === Number(month);
+      });
+      laporanPenjualanBulananTbody.innerHTML = "";
+      let grandTotal = 0;
+      filtered.forEach((p) => {
+        grandTotal += p.total;
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${formatDate(p.tanggal)}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.customer}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.barang}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.jumlah}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(p.harga)}</td>
+          <td class="border border-gray-300 px-3 py-1">${p.keterangan || ""}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(p.total)}</td>
+        `;
+        laporanPenjualanBulananTbody.appendChild(tr);
+      });
+      laporanPenjualanBulananGrandtotal.textContent = formatRp(grandTotal);
+    });
+
+    // ========== LAPORAN LABA RUGI PER PERIODE ==========
+    const laporanLabaRugiForm = document.getElementById("laporan-laba-rugi-form");
+    const laporanLabaRugiTbody = document.getElementById("laporan-laba-rugi-tbody");
+    const laporanLabaRugiPendapatan = document.getElementById("laporan-laba-rugi-pendapatan");
+    const laporanLabaRugiPengeluaran = document.getElementById("laporan-laba-rugi-pengeluaran");
+    const laporanLabaRugiLaba = document.getElementById("laporan-laba-rugi-laba");
+
+    laporanLabaRugiForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const start = laporanLabaRugiForm["laporan-laba-rugi-start"].value;
+      const end = laporanLabaRugiForm["laporan-laba-rugi-end"].value;
+      if (!start || !end || start > end) {
+        alert("Periode tanggal tidak valid.");
+        return;
+      }
+      const penjualan = await getAll("penjualan");
+      const pembelian = await getAll("pembelian");
+
+      const filteredPenjualan = penjualan.filter((p) => p.tanggal >= start && p.tanggal <= end);
+      const filteredPembelian = pembelian.filter((p) => p.tanggal >= start && p.tanggal <= end);
+
+      // Group by date
+      const datesSet = new Set();
+      filteredPenjualan.forEach((p) => datesSet.add(p.tanggal));
+      filteredPembelian.forEach((p) => datesSet.add(p.tanggal));
+      const dates = Array.from(datesSet).sort();
+
+      laporanLabaRugiTbody.innerHTML = "";
+      let totalPendapatan = 0;
+      let totalPengeluaran = 0;
+
+      dates.forEach((date) => {
+        const pendapatan = filteredPenjualan
+          .filter((p) => p.tanggal === date)
+          .reduce((acc, cur) => acc + cur.total, 0);
+        const pengeluaran = filteredPembelian
+          .filter((p) => p.tanggal === date)
+          .reduce((acc, cur) => acc + cur.total, 0);
+        const laba = pendapatan - pengeluaran;
+        totalPendapatan += pendapatan;
+        totalPengeluaran += pengeluaran;
+
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${formatDate(date)}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(pendapatan)}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(pengeluaran)}</td>
+          <td class="border border-gray-300 px-3 py-1">${formatRp(laba)}</td>
+        `;
+        laporanLabaRugiTbody.appendChild(tr);
+      });
+
+      laporanLabaRugiPendapatan.textContent = formatRp(totalPendapatan);
+      laporanLabaRugiPengeluaran.textContent = formatRp(totalPengeluaran);
+      laporanLabaRugiLaba.textContent = formatRp(totalPendapatan - totalPengeluaran);
+    });
+
+    // ========== LAPORAN STOK PER PERIODE ==========
+    const laporanStokPeriodeForm = document.getElementById("laporan-stok-periode-form");
+    const laporanStokPeriodeTbody = document.getElementById("laporan-stok-periode-tbody");
+
+    laporanStokPeriodeForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const start = laporanStokPeriodeForm["laporan-stok-start"].value;
+      const end = laporanStokPeriodeForm["laporan-stok-end"].value;
+      if (!start || !end || start > end) {
+        alert("Periode tanggal tidak valid.");
+        return;
+      }
+      const hargaBarang = await getAll("hargaBarang");
+      const pembelian = await getAll("pembelian");
+      const penjualan = await getAll("penjualan");
+
+      laporanStokPeriodeTbody.innerHTML = "";
+
+      hargaBarang.forEach((barang) => {
+        // Stok Awal: total pembelian sebelum start - total penjualan sebelum start
+        const pembelianAwal = pembelian
+          .filter((p) => p.barang === barang.namaBarang && p.tanggal < start)
+          .reduce((acc, cur) => acc + cur.jumlah, 0);
+        const penjualanAwal = penjualan
+          .filter((p) => p.barang === barang.namaBarang && p.tanggal < start)
+          .reduce((acc, cur) => acc + cur.jumlah, 0);
+        const stokAwal = pembelianAwal - penjualanAwal;
+
+        // Pembelian periode
+        const pembelianPeriode = pembelian
+          .filter((p) => p.barang === barang.namaBarang && p.tanggal >= start && p.tanggal <= end)
+          .reduce((acc, cur) => acc + cur.jumlah, 0);
+
+        // Penjualan periode
+        const penjualanPeriode = penjualan
+          .filter((p) => p.barang === barang.namaBarang && p.tanggal >= start && p.tanggal <= end)
+          .reduce((acc, cur) => acc + cur.jumlah, 0);
+
+        // Stok Akhir
+        const stokAkhir = stokAwal + pembelianPeriode - penjualanPeriode;
+
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-gray-50";
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-3 py-1">${barang.namaBarang}</td>
+          <td class="border border-gray-300 px-3 py-1">${stokAwal.toFixed(2)}</td>
+          <td class="border border-gray-300 px-3 py-1">${pembelianPeriode.toFixed(2)}</td>
+          <td class="border border-gray-300 px-3 py-1">${penjualanPeriode.toFixed(2)}</td>
+          <td class="border border-gray-300 px-3 py-1">${stokAkhir.toFixed(2)}</td>
+        `;
+        laporanStokPeriodeTbody.appendChild(tr);
+      });
+    });
+
+    // Menu Buttons to show sections
+    masterUserBtn.addEventListener("click", () => showSection("master-user"));
+    masterHargaBtn.addEventListener("click", () => showSection("master-harga"));
+    masterSupplierBtn.addEventListener("click", () => showSection("master-supplier"));
+    masterCustomerBtn.addEventListener("click", () => showSection("master-customer"));
+    transaksiPenjualanBtn.addEventListener("click", () => showSection("transaksi-penjualan"));
+    transaksiPembelianBtn.addEventListener("click", () => showSection("transaksi-pembelian"));
+    laporanPenjualanPeriodeBtn.addEventListener("click", () => showSection("laporan-penjualan-periode"));
+    laporanPembelianBulananBtn.addEventListener("click", () => showSection("laporan-pembelian-bulanan"));
+    laporanPenjualanBulananBtn.addEventListener("click", () => showSection("laporan-penjualan-bulanan"));
+    laporanLabaRugiBtn.addEventListener("click", () => showSection("laporan-laba-rugi"));
+    laporanStokPeriodeBtn.addEventListener("click", () => showSection("laporan-stok-periode"));
+
+    // Initialize DB and load example data if empty
+    async function init() {
+      await openDB();
+
+      // Check if users exist, if not add default admin user
+      const users = await getAll("users");
+      if (users.length === 0) {
+        await addItem("users", { username: "Admin", password: "putra", role: "admin" });
+      }
+
+      // Add example data for hargaBarang
+      const hargaBarang = await getAll("hargaBarang");
+      if (hargaBarang.length === 0) {
+        await addItem("hargaBarang", { namaBarang: "Air Mineral 19L", harga: 15000, jumlah: 19 });
+        await addItem("hargaBarang", { namaBarang: "Air Mineral 12L", harga: 10000, jumlah: 12 });
+        await addItem("hargaBarang", { namaBarang: "Air Mineral 6L", harga: 6000, jumlah: 6 });
+      }
+
+      // Add example data for suppliers
+      const suppliers = await getAll("suppliers");
+      if (suppliers.length === 0) {
+        await addItem("suppliers", { namaSupplier: "PT Aqua Jaya", alamat: "Jl. Merdeka No. 10", telepon: "081234567890" });
+        await addItem("suppliers", { namaSupplier: "CV Sumber Air", alamat: "Jl. Sudirman No. 5", telepon: "082345678901" });
+      }
+
+      // Add example data for customers
+      const customers = await getAll("customers");
+      if (customers.length === 0) {
+        await addItem("customers", { namaCustomer: "Budi Santoso", alamat: "Jl. Melati No. 3", telepon: "081298765432" });
+        await addItem("customers", { namaCustomer: "Sari Dewi", alamat: "Jl. Kenanga No. 7", telepon: "082198765432" });
+      }
+
+      // Add example data for penjualan
+      const penjualan = await getAll("penjualan");
+      if (penjualan.length === 0) {
+        await addItem("penjualan", {
+          tanggal: "2024-06-01",
+          customer: "Budi Santoso",
+          barang: "Air Mineral 19L",
+          jumlah: 2,
+          harga: 15000,
+          keterangan: "Pembelian rutin",
+          total: 30000,
+        });
+        await addItem("penjualan", {
+          tanggal: "2024-06-02",
+          customer: "Sari Dewi",
+          barang: "Air Mineral 12L",
+          jumlah: 3,
+          harga: 10000,
+          keterangan: "",
+          total: 30000,
+        });
+      }
+
+      // Add example data for pembelian
+      const pembelian = await getAll("pembelian");
+      if (pembelian.length === 0) {
+        await addItem("pembelian", {
+          tanggal: "2024-05-30",
+          supplier: "PT Aqua Jaya",
+          barang: "Air Mineral 19L",
+          jumlah: 10,
+          harga: 14000,
+          total: 140000,
+        });
+        await addItem("pembelian", {
+          tanggal: "2024-06-01",
+          supplier: "CV Sumber Air",
+          barang: "Air Mineral 12L",
+          jumlah: 15,
+          harga: 9000,
+          total: 135000,
+        });
+      }
+    }
+
+    // On page load
+    window.addEventListener("load", async () => {
+      await init();
+      showLogin(true);
+    });
+  </script>
+ </body>
+</html>
